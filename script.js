@@ -3,6 +3,7 @@ const textoCor = document.getElementById('rgb-color');
 const cores = [];
 const textoResposta = document.getElementById('answer');
 const botaoReiniciar = document.getElementById('reset-game');
+const gab = document.getElementsByClassName('gabarito');
 //commentary
 //elementos : tudo o que está entre tags, tipo 'div', 'p'
 //console.log(balls);
@@ -38,7 +39,18 @@ function addCorAleatoria(){
     textoCor.textContent = cores[numeroAleatorio(6)]
 };
 
+function preencheGab(){
+    var aux = textoCor.textContent;
+    var a = aux.split("(")[1].split(")")[0];
+    a = a.split(",");
+    gab[0].style.backgroundColor = "rgb("+a[0]+",0,0)";
+    gab[1].style.backgroundColor = "rgb(0,"+a[1]+",0)";
+    gab[2].style.backgroundColor = "rgb(0,0,"+a[2]+")";
+};
+
 addCorAleatoria();
+preencheGab();
+
 
 function reiniciaJogo(){
     window.location.reload();
