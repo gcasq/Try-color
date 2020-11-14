@@ -5,3 +5,11 @@
     height: 50px;
     width: 50px;
 }
+
+.gabarito{
+    border: 1px solid rgb(59, 13, 13);
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
