@@ -13,7 +13,7 @@ function corAleatoria(){
     return rgb;
 }
 
-for(let bola=0;bola<balls.length;bola++){
+for(let bola=0;bola<balls.length;bola+=1){
     balls[bola].style.backgroundColor = corAleatoria();
 };
 
